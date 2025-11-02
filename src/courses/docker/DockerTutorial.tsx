@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight, CheckCircle, Sailboat, ArrowLeft, Terminal } from 'lucide-react';
+import { ChevronDown, ChevronRight, CheckCircle, Sailboat, ArrowLeft } from 'lucide-react';
 import { CourseComponentProps } from '../../types';
 import { dockerCourseSlides } from './dockerCourseData';
 
