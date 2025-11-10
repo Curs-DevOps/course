@@ -3,7 +3,8 @@ import { CourseDefinition } from '../types';
 import GitTutorial from '../courses/git/GitTutorial';
 import DockerTutorial from '../courses/docker/DockerTutorial';
 import GitHubActionsTutorial from '../courses/github-actions/GitHubActionsTutorial';
-import { GitBranch, Sailboat, GitMerge } from 'lucide-react';
+import MicroservicesTutorial from '../courses/microservices/MicroservicesTutorial';
+import { GitBranch, Sailboat, GitMerge, Cpu } from 'lucide-react';
 
 
 export const allCourses: CourseDefinition[] = [
@@ -27,6 +28,13 @@ export const allCourses: CourseDefinition[] = [
     description: 'Master GitHub Actions and learn how to secure your CI/CD pipeline.',
     icon: <GitMerge className="w-10 h-10 text-purple-600" />,
     component: GitHubActionsTutorial,
+  },
+  {
+    id: 'microservices',
+    title: 'Microservices Architecture and Patterns',
+    description: 'An interactive journey into microservices, from API gateways to event-driven architecture.',
+    icon: <Cpu className="w-10 h-10 text-teal-600" />,
+    component: MicroservicesTutorial,
   },
 ];
 
