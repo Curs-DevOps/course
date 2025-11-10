@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart, FileText, Telescope, AlertTriangle } from 'lucide-react';
 
@@ -67,7 +67,7 @@ const MetricsLogsTracesDiagram = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Traces */}
       <div className="mt-4 p-2 rounded-lg bg-gray-800">
         <h4 className="font-semibold flex items-center gap-2"><Telescope /> Traces</h4>

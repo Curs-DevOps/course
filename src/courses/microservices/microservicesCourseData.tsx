@@ -1,17 +1,5 @@
-
-
-import React from 'react';
-import { Cpu, GitBranch, Shield, Server, Zap, HeartPulse, MessageSquare, Box, Key, Telescope, BarChart, FileText, GitCommit } from 'lucide-react';
+import { GitBranch, Shield, Server, HeartPulse, MessageSquare, Box, Key, Telescope, BarChart, GitCommit } from 'lucide-react';
 import { MicroservicesSlide } from './types';
-import ApiGatewaySimulation from './components/ApiGatewaySimulation';
-import ServiceDiscoveryAnimation from './components/ServiceDiscoveryAnimation';
-import CircuitBreakerAnimation from './components/CircuitBreakerAnimation';
-import EventDrivenArchitectureAnimation from './components/EventDrivenArchitectureAnimation';
-import SidecarPatternAnimation from './components/SidecarPatternAnimation';
-import OutboxPatternAnimation from './components/OutboxPatternAnimation';
-import VaultAnimation from './components/VaultAnimation';
-import ObservabilityAnimation from './components/ObservabilityAnimation';
-import MetricsLogsTracesDiagram from './components/MetricsLogsTracesDiagram';
 
 export const microservicesCourseSlides: MicroservicesSlide[] = [
   {
