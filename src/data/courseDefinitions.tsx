@@ -4,7 +4,8 @@ import GitTutorial from '../courses/git/GitTutorial';
 import DockerTutorial from '../courses/docker/DockerTutorial';
 import GitHubActionsTutorial from '../courses/github-actions/GitHubActionsTutorial';
 import MicroservicesTutorial from '../courses/microservices/MicroservicesTutorial';
-import { GitBranch, Sailboat, GitMerge, Cpu } from 'lucide-react';
+import NetworkingSecurityTutorial from '../courses/networking-security/NetworkingSecurityTutorial';
+import { GitBranch, Sailboat, GitMerge, Cpu, ShieldCheck } from 'lucide-react';
 
 
 export const allCourses: CourseDefinition[] = [
@@ -35,6 +36,13 @@ export const allCourses: CourseDefinition[] = [
     description: 'An interactive journey into microservices, from API gateways to event-driven architecture.',
     icon: <Cpu className="w-10 h-10 text-teal-600" />,
     component: MicroservicesTutorial,
+  },
+  {
+    id: 'networking-security',
+    title: 'Interactive Networking and Security',
+    description: 'An animated and interactive course on networking, security, and observability.',
+    icon: <ShieldCheck className="w-10 h-10 text-red-600" />,
+    component: NetworkingSecurityTutorial,
   },
 ];
 
