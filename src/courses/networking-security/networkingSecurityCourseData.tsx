@@ -12,7 +12,6 @@ import {
   Target,
   FolderLock,
   Globe,
-  Cloud,
 } from 'lucide-react';
 import { NetworkingSecuritySlide } from './types';
 import AnimatedTopologyBuilder from './components/AnimatedTopologyBuilder';
@@ -322,49 +321,49 @@ export const networkingSecurityCourseSlides: NetworkingSecuritySlide[] = [
         </div>
     ),
   },
-  {
-    title: 'Advanced Firewall Configuration: iptables and Cloud Firewalls',
-    icon: <Cloud className="w-8 h-8 text-blue-400" />,
-    mode: 'interactive',
-    steps: [
-      {
-        title: 'iptables Simulator: Linux Firewall Management',
-        instructions: (
-          <div className="space-y-2">
-            <p><span className="font-semibold">iptables</span> is a command-line firewall utility that uses policy chains to allow or block traffic. It's the standard firewall for Linux operating systems and provides highly granular control over network packets. Understanding iptables is crucial for managing security on Linux servers.</p>
-            <p>iptables works by examining packets against a set of rules. These rules are organized into chains (INPUT, OUTPUT, FORWARD) and tables (filter, nat, mangle, raw). Each rule specifies criteria (source/destination IP, port, protocol) and an action (ACCEPT, DROP, REJECT).</p>
-            <p>In this simulator, you will learn to create and manage iptables rules. Your task is to configure a firewall on a simulated Linux server to:</p>
-            <ol className="list-decimal list-inside ml-4 space-y-1">
-              <li>Allow incoming web traffic on standard HTTP (port 80) and HTTPS (port 443).</li>
-              <li>Allow established and related incoming connections (for replies to your outgoing traffic).</li>
-              <li>Block all other incoming connections by default.</li>
-              <li>Allow all outgoing connections.</li>
-            </ol>
-            <p className="font-semibold">Experiment with adding and deleting rules, then test connectivity to see the effects of your firewall configuration. This hands-on experience will solidify your understanding of Linux firewall management.</p>
-          </div>
-        ),
-        component: <div />,
-      },
-      {
-        title: 'Cloud Firewall Simulator: Securing Cloud Resources',
-        instructions: (
-          <div className="space-y-2">
-            <p><span className="font-semibold">Cloud firewalls</span>, often implemented as Security Groups (AWS) or Network Security Groups (Azure/GCP), are fundamental to securing resources in cloud environments. Unlike traditional network firewalls, cloud firewalls are typically stateless (for Security Groups) or stateful (for NSGs) and operate at the instance or network interface level, enabling micro-segmentation.</p>
-            <p>They control inbound and outbound traffic for your virtual machines, databases, and other cloud services. The principle of least privilege is paramount here: only allow the traffic that is absolutely necessary.</p>
-            <p>In this simulator, you will configure a cloud firewall for a simulated web server in a cloud environment. Your goal is to:</p>
-            <ol className="list-decimal list-inside ml-4 space-y-1">
-              <li>Allow SSH access (port 22) only from a specific IP address (e.g., your administrative workstation's public IP).</li>
-              <li>Allow incoming HTTP (port 80) and HTTPS (port 443) traffic from anywhere (0.0.0.0/0) to make your web server publicly accessible.</li>
-              <li>Block all other incoming traffic by default.</li>
-              <li>Allow all outgoing traffic (a common default for simplicity, though in production, this would also be restricted).</li>
-            </ol>
-            <p className="font-semibold">Configure these rules and test access to the web server and SSH. This exercise demonstrates how to apply granular security controls in a cloud-native way.</p>
-          </div>
-        ),
-        component: <div />,
-      },
-    ],
-  },
+  // {
+  //   title: 'Advanced Firewall Configuration: iptables and Cloud Firewalls',
+  //   icon: <Cloud className="w-8 h-8 text-blue-400" />,
+  //   mode: 'interactive',
+  //   steps: [
+  //     {
+  //       title: 'iptables Simulator: Linux Firewall Management',
+  //       instructions: (
+  //         <div className="space-y-2">
+  //           <p><span className="font-semibold">iptables</span> is a command-line firewall utility that uses policy chains to allow or block traffic. It's the standard firewall for Linux operating systems and provides highly granular control over network packets. Understanding iptables is crucial for managing security on Linux servers.</p>
+  //           <p>iptables works by examining packets against a set of rules. These rules are organized into chains (INPUT, OUTPUT, FORWARD) and tables (filter, nat, mangle, raw). Each rule specifies criteria (source/destination IP, port, protocol) and an action (ACCEPT, DROP, REJECT).</p>
+  //           <p>In this simulator, you will learn to create and manage iptables rules. Your task is to configure a firewall on a simulated Linux server to:</p>
+  //           <ol className="list-decimal list-inside ml-4 space-y-1">
+  //             <li>Allow incoming web traffic on standard HTTP (port 80) and HTTPS (port 443).</li>
+  //             <li>Allow established and related incoming connections (for replies to your outgoing traffic).</li>
+  //             <li>Block all other incoming connections by default.</li>
+  //             <li>Allow all outgoing connections.</li>
+  //           </ol>
+  //           <p className="font-semibold">Experiment with adding and deleting rules, then test connectivity to see the effects of your firewall configuration. This hands-on experience will solidify your understanding of Linux firewall management.</p>
+  //         </div>
+  //       ),
+  //       component: <div />,
+  //     },
+  //     {
+  //       title: 'Cloud Firewall Simulator: Securing Cloud Resources',
+  //       instructions: (
+  //         <div className="space-y-2">
+  //           <p><span className="font-semibold">Cloud firewalls</span>, often implemented as Security Groups (AWS) or Network Security Groups (Azure/GCP), are fundamental to securing resources in cloud environments. Unlike traditional network firewalls, cloud firewalls are typically stateless (for Security Groups) or stateful (for NSGs) and operate at the instance or network interface level, enabling micro-segmentation.</p>
+  //           <p>They control inbound and outbound traffic for your virtual machines, databases, and other cloud services. The principle of least privilege is paramount here: only allow the traffic that is absolutely necessary.</p>
+  //           <p>In this simulator, you will configure a cloud firewall for a simulated web server in a cloud environment. Your goal is to:</p>
+  //           <ol className="list-decimal list-inside ml-4 space-y-1">
+  //             <li>Allow SSH access (port 22) only from a specific IP address (e.g., your administrative workstation's public IP).</li>
+  //             <li>Allow incoming HTTP (port 80) and HTTPS (port 443) traffic from anywhere (0.0.0.0/0) to make your web server publicly accessible.</li>
+  //             <li>Block all other incoming traffic by default.</li>
+  //             <li>Allow all outgoing traffic (a common default for simplicity, though in production, this would also be restricted).</li>
+  //           </ol>
+  //           <p className="font-semibold">Configure these rules and test access to the web server and SSH. This exercise demonstrates how to apply granular security controls in a cloud-native way.</p>
+  //         </div>
+  //       ),
+  //       component: <div />,
+  //     },
+  //   ],
+  // },
   {
     title: 'Network Observability: The Three Pillars',
     icon: <Eye className="w-8 h-8 text-cyan-500" />,
